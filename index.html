@@ -6,52 +6,66 @@
     <title>Dynamic Frame Update</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
    
 </head>
 <body>
-  
-
-   <div class="container">
-        <div class="form-container">
-            <label class="form-label">Enter Your Image</label>
-            <input type="file" class="form-control" id="imageInput" accept="image/*">
-
-            <label class="form-label">Enter Your Name</label>
-            <input type="text" id="nameInput" class="form-control" placeholder="Enter Your Name">
-
-            <label class="form-label">Enter Your Batch Name</label>
-            <input type="text" id="batchInput" class="form-control" placeholder="Enter Your Batch Name">
-
-            <label class="form-label">Select Your Wish Text</label>
-            <select id="wishInput" class="form-select">
-                <option value="">Enter Your wish here</option>
-                <option value="Feeling Happy!">Feeling Happy!</option>
-                <option value="Feeling Excited!">Feeling Excited!</option>
-                <option value="Best Wishes!">Best Wishes!</option>
-                <option value="Proud Moment!">Proud Moment!</option>
-            </select>
-           
-            <button id="downloadBtn" class="btn btn-danger mt-4">Download Frame</button>
-        </div>
-        <div class="frame" id="preview">
-            <div class="ImgFrame">
-                <img id="previewImage" src="https://via.placeholder.com/100" alt="Your Image">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex Haader justify-content-center align-items-center">
+                <img src="./images/logo.jpg" alt="" width="100" height="100" >
+                <h1> Bozratek Sobja Pilot High School</h1>
             </div>
-            <div class="name" id="previewName"></div>
-            <svg width="400" height="200" class="batch">
-            <defs>
-                <path id="curve" d="M100,150 A150,150 0 0,1 300,150" />
-            </defs>
-            <text width="500">
-                <textPath href="#curve" startOffset="50%" text-anchor="middle" id="previewBatch">
-                   
-                </textPath>
-            </text>
-             </svg>
-            <div class="wish" id="previewWish"></div>
         </div>
     </div>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-   <script src="js/script.js"></script>
+    <div class="container mx-auto">
+        <div class="row mx-auto">
+            <div class="col-md-6">
+                <div class="form-container">
+                <label class="form-label">Enter Your Image</label>
+                <input type="file" class="form-control" id="imageInput" accept="image/*">
+
+                <label class="form-label">Enter Your Name</label>
+                <input type="text" id="nameInput" class="form-control" placeholder="Enter Your Name">
+
+                <label class="form-label">Enter Your Batch Name</label>
+                <input type="text" id="batchInput" class="form-control" placeholder="Enter Your Batch Name">
+
+                <label class="form-label">Select Your Wish Text</label>
+                <select id="wishInput" class="form-select">
+                    <option value="">Enter Your wish here</option>
+                    <option value="Feeling Happy!">Feeling Happy!</option>
+                    <option value="Feeling Excited!">Feeling Excited!</option>
+                    <option value="Best Wishes!">Best Wishes!</option>
+                    <option value="Proud Moment!">Proud Moment!</option>
+                </select>
+            
+                <button id="downloadBtn" class="btn btn-danger ">Download Frame</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="frame" id="preview">
+                    <div class="ImgFrame">
+                        <img id="previewImage" src="https://via.placeholder.com/100" alt="Your Image">
+                    </div>
+                    <div class="name" id="previewName"></div>
+                    <div class="batch" id="previewBatch"></div>
+                    <!-- <svg width="400" height="200" class="batch" id="previewBatch">
+                    <defs>
+                        <path id="curve" d="M100,150 A150,150 0 0,1 300,150" />
+                    </defs>
+                    <text width="500">
+                        <textPath href="#curve" startOffset="50%" text-anchor="middle" id="previewBatch">
+                    
+                        </textPath>
+                    </text>
+                    </svg> -->
+                    <div class="wish" id="previewWish"></div>
+                </div>
+            </div>
+        </div>   
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,10 +1,15 @@
 body {
   font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
-  background: #f5f5f5;
+}
+h1{
+  color: #14552A;
+  font-weight: bold;
+  text-align: center;
+}
+.Haader{
+  gap: 20px;
+  padding: 50px 0px;
 }
 .container {
   display: flex;
@@ -15,18 +20,19 @@ body {
     flex-direction: column;
     gap: 10px;
     background: #14552A;
-    padding: 50px 100px;
+    padding: 30px 40px;
     border-radius: 20px;
+    width: 380px;
+    height: 450px;
 }
 .frame {
-  width: 600px;
-  height: 600px;
+  width: 380px;
+  height: 450px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 20px;
   position: relative;
-  background-image: url("../images/framee.jpg");
+  background-image: url("../images/framei.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -40,25 +46,25 @@ label{
     border-radius: 20px;
 }
 .ImgFrame {
-    width: 280px;
-    height: 320px;
+    width: 180px;
+    height: 220px;
     background-color: #ddd;
     border-radius: 20px;
     position: absolute;
-    bottom: 50px;
-    right: 35px;
-    border: 3px dashed #E40019;
+    bottom: 40px;
+    right: 25px;
+    border: 2px dashed #E40019;
 }
-
 .frame::after {
     content: "";
-    background-image: url("../images/circlee.png");
+    background-image: url("../images/circle.png");
     background-repeat: no-repeat;
     position: absolute;
-    top: 448px;
-    left: 327px;
+    top: 350px;
+    left: 244px;
     width: 100%;
     height: 100%;
+    /* z-index: -1; */
 }
 .name,
 .batch,
@@ -68,20 +74,33 @@ label{
   font-weight: bold;
 }
 .name {
-    bottom: 85px;
-    left: 80px;
-    font-size: 26px;
-    color: #14552A;
+    bottom: 90px;
+    left: 30px;
+    font-size: 24px;
+    font-weight: 800;
 }
 .batch {
-    bottom: 33px;
-    right: -95px;
+    position: absolute;
+    bottom: -98%;
+    left: 89%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* border-radius: 50%; */
     z-index: 1;
 }
+.batch span {
+    position: absolute;
+    
+    font-size: 18px;
+    font-weight: bold;
+}
 .wish {
-    bottom: 50px;
+    bottom: 60px;
     color: #E40019;
-    font-size: 20px;
-    left: 80px;
+    font-size: 18px;
+    left: 30px;
     font-weight: bold;
 }

@@ -16,8 +16,23 @@ document.getElementById("nameInput").addEventListener("input", function () {
 });
 
 document.getElementById("batchInput").addEventListener("input", function () {
-  document.getElementById("previewBatch").textContent = "Batch: " + this.value;
+  const text = "Batch: " + this.value;
+  const batchContainer = document.getElementById("previewBatch");
+  batchContainer.innerHTML = "";
+
+  const radius = 75; // control the curve
+  const degIncrement = 120 / text.length;
+
+  text.split("").forEach((char, i) => {
+    const span = document.createElement("span");
+    span.textContent = char;
+    span.style.transform = `rotate(${
+      i * degIncrement - 85
+    }deg) translateY(-${radius}px)`;
+    batchContainer.appendChild(span);
+  });
 });
+
 
 document.getElementById("wishInput").addEventListener("input", function () {
   document.getElementById("previewWish").textContent = this.value;

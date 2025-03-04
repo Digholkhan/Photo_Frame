@@ -1,0 +1,24 @@
+@media (max-width:576px){
+    .frame {
+    width: 400px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    background-image: url("../images/framei.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-top: 60px;
+    }
+    .frame::after { 
+    top: 350px;
+    left: 264px;
+    }
+    .Haader{
+        flex-wrap: wrap;
+        gap: 0px;
+        padding: 20px 15px;
+        
+    }
+}
